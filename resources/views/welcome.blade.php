@@ -239,6 +239,25 @@
                 Setiap sajian di Bakul Nusantara dimasak sempurna mengutamakan keaslian cita rasa rempah pilihan.
             </p>
 
+            <!-- Menu Category Variant Filter Tabs (Matching Figma Design) -->
+            <div class="flex items-center justify-center space-x-6 md:space-x-10 mb-10 border-b border-amber-900/40 pb-3">
+                <button onclick="filterMenuCategory('all', this)" class="menu-tab-btn font-serif-title text-lg md:text-xl font-semibold text-[#e8a838] border-b-2 border-[#e8a838] pb-1 transition-all">
+                    Menu
+                </button>
+                <button onclick="filterMenuCategory('appetizer', this)" class="menu-tab-btn font-serif-title text-lg md:text-xl font-medium text-amber-100/70 hover:text-amber-300 pb-1 transition-all">
+                    Menu
+                </button>
+                <button onclick="filterMenuCategory('main', this)" class="menu-tab-btn font-serif-title text-lg md:text-xl font-medium text-amber-100/70 hover:text-amber-300 pb-1 transition-all">
+                    Menu
+                </button>
+                <button onclick="filterMenuCategory('dessert', this)" class="menu-tab-btn font-serif-title text-lg md:text-xl font-medium text-amber-100/70 hover:text-amber-300 pb-1 transition-all">
+                    Menu
+                </button>
+                <button onclick="filterMenuCategory('beverage', this)" class="menu-tab-btn font-serif-title text-lg md:text-xl font-medium text-amber-100/70 hover:text-amber-300 pb-1 transition-all">
+                    Menu
+                </button>
+            </div>
+
             <!-- Slider Outer Container with Side Arrows -->
             <div class="relative px-2 md:px-10">
                 <!-- Outer Left Arrow Button -->
@@ -730,6 +749,18 @@
 
     <!-- JavaScript Handlers -->
     <script>
+        // Menu Category Tab Filter Logic
+        function filterMenuCategory(cat, btnElement) {
+            const tabs = document.querySelectorAll('.menu-tab-btn');
+            tabs.forEach(tab => {
+                tab.classList.remove('text-[#e8a838]', 'border-b-2', 'border-[#e8a838]', 'font-semibold');
+                tab.classList.add('text-amber-100/70', 'font-medium');
+            });
+            btnElement.classList.remove('text-amber-100/70', 'font-medium');
+            btnElement.classList.add('text-[#e8a838]', 'border-b-2', 'border-[#e8a838]', 'font-semibold');
+            showMenuPage(0);
+        }
+
         // Signature Menu Slider Logic
         let currentMenuPage = 0;
         const totalMenuPages = 2;
