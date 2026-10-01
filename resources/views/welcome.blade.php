@@ -90,7 +90,7 @@
             <!-- Left Narrative Column (Matching Reference Design Exactly) -->
             <div class="lg:col-span-6 space-y-6 text-left pl-6 md:pl-16 lg:pl-20 pr-6 lg:pr-12 py-12 lg:py-20 flex flex-col justify-center">
                 <!-- Tagline Badge with Side Accent Lines -->
-                <div class="inline-flex items-center space-x-3 border-b border-t border-[#4a1010]/30 py-1.5 px-3">
+                <div class="w-fit self-start max-w-max inline-flex items-center border-b border-t border-[#4a1010]/40 py-1 px-2">
                     <span class="font-serif-title text-xs md:text-sm tracking-[0.2em] uppercase text-[#4a1010] font-bold">An Authentic Gastronomic Journey</span>
                 </div>
 
