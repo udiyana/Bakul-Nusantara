@@ -429,6 +429,47 @@
     <!-- ================= BATIK STRIP 5 ================= -->
     <div class="batik-strip"></div>
 
+    <!-- ================= 5.5 LOCATION & MAP SECTION (Matching Figma Reference Design) ================= -->
+    <section id="location" class="bg-batik-watermark py-20 px-4 md:px-12 text-stone-900 border-b border-amber-900/20">
+        <div class="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+            <!-- Left Google Maps Container -->
+            <div class="lg:col-span-6 h-80 md:h-[420px] rounded-2xl overflow-hidden shadow-card-luxury border-2 border-[#4a1010]/20 relative">
+                <iframe 
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.273647182743!2d106.80628237586884!3d-6.227608860986923!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f14d3065b2d7%3A0xd6e5f8f8b8a5b2d!2sJl.%20Senopati%2C%20Kebayoran%20Baru%2C%20Jakarta%20Selatan!5e0!3m2!1sid!2sid!4v1700000000000!5m2!1sid!2sid" 
+                    class="w-full h-full border-0" 
+                    allowfullscreen="" 
+                    loading="lazy" 
+                    referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+            </div>
+
+            <!-- Right Narrative Column (Matching Figma Design Exactly) -->
+            <div class="lg:col-span-6 space-y-6 text-left">
+                <h2 class="font-serif-title text-4xl md:text-5xl text-[#4a1010] font-semibold leading-tight tracking-tight">
+                    Easily pin our location and plan your visit today
+                </h2>
+
+                <p class="text-xs md:text-sm text-[#3b2316] leading-relaxed font-sans">
+                    Bakoel Nusantara offers far more than just a meal; it serves as the perfect setting to celebrate life's most cherished moments. Whether it is a memorable surprise birthday party, an intimate candlelit dinner for two perfect for Valentine's Day or anniversaries amidst antique teak architecture, or a prestigious private business gathering, we ensure every moment is deeply personal and meaningful. Accompanied by the soothing sounds of contemporary ethnic instrumental music and the warm hospitality characteristic of the archipelago, we create an experience that is truly special.
+                </p>
+
+                <div class="flex flex-wrap items-center gap-4 pt-2">
+                    <button onclick="toggleReservationModal()" class="px-7 py-3.5 bg-[#e8a838] hover:bg-[#d99627] text-[#270706] font-bold text-xs uppercase tracking-wider rounded shadow transition-all flex items-center space-x-2 border border-amber-300 hover:scale-105">
+                        <span>Reserve now</span>
+                        <i class="fa-solid fa-arrow-right text-xs"></i>
+                    </button>
+                    <a href="https://maps.google.com/?q=Senopati+Jakarta+Selatan" target="_blank" rel="noopener noreferrer" class="px-7 py-3.5 bg-[#460904] hover:bg-[#320603] text-[#e8a838] font-bold text-xs uppercase tracking-wider rounded shadow transition-all flex items-center space-x-2 border border-amber-500/30 hover:scale-105">
+                        <span>Open in Google Maps</span>
+                        <i class="fa-solid fa-arrow-right text-xs"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= BATIK STRIP 6 ================= -->
+    <div class="batik-strip"></div>
+
     <!-- ================= 6. RESERVE TABLE BANNER ================= -->
     <section class="relative py-24 px-4 text-center overflow-hidden">
         <div class="absolute inset-0 z-0 bg-cover bg-center filter brightness-35" style="background-image: url('https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?q=80&w=2070&auto=format&fit=crop');"></div>
