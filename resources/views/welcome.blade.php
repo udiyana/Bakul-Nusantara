@@ -497,44 +497,163 @@
     <!-- ================= BATIK STRIP 6 ================= -->
     <div class="batik-strip"></div>
 
-    <!-- ================= 7. FOOTER ================= -->
-    <footer class="bg-[#270707] py-14 px-4 md:px-12 border-t border-amber-900/40 text-amber-100/80 text-xs">
-        <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-12 gap-8 mb-10 text-left">
-            <div class="md:col-span-4">
-                <div class="flex items-center space-x-3 mb-4">
-                    <div class="w-10 h-10 rounded-full border border-amber-400 flex items-center justify-center bg-[#3b0d0d]">
-                        <svg viewBox="0 0 100 100" class="w-6 h-6 text-amber-400 fill-current">
+    <!-- ================= 6.5 VISIT OUR BLOG SECTION ================= -->
+    <section id="blog" class="bg-batik-watermark py-20 px-4 md:px-12 text-stone-900 border-b border-amber-900/20">
+        <div class="max-w-6xl mx-auto text-center">
+            <h2 class="font-serif-title text-4xl md:text-5xl text-[#4a1010] font-semibold leading-tight tracking-tight mb-12">
+                Visit Our Blog
+            </h2>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Blog Card 1 -->
+                <div class="bg-[#f0e4d4] rounded-none border border-[#4a1010]/30 overflow-hidden shadow-sm flex flex-col text-left">
+                    <div class="h-48 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1555939594-58d7cb561ad1?q=80&w=600&auto=format&fit=crop" alt="Nasi Goreng Seafood" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500">
+                    </div>
+                    <div class="p-4 flex-grow flex flex-col justify-between">
+                        <div>
+                            <div class="flex items-center justify-between text-[11px] text-[#4a1010]/80 font-sans mb-3 pb-2 border-b border-[#4a1010]/20">
+                                <span>Bakul Nusantara</span>
+                                <span>5 Days Ago</span>
+                            </div>
+                            <h3 class="font-serif-title text-2xl text-[#4a1010] font-semibold mb-2">
+                                Lorem Ipsum
+                            </h3>
+                            <p class="text-xs text-[#3b2316]/90 leading-relaxed font-sans mb-4">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                            </p>
+                        </div>
+                        <div class="pt-3 border-t border-[#4a1010]/20">
+                            <a href="#" class="text-xs font-serif-title text-[#4a1010] hover:text-[#e8a838] transition-colors font-medium">
+                                See Details &gt;
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Blog Card 2 -->
+                <div class="bg-[#f0e4d4] rounded-none border border-[#4a1010]/30 overflow-hidden shadow-sm flex flex-col text-left">
+                    <div class="h-48 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1544025162-d76694265947?q=80&w=600&auto=format&fit=crop" alt="Mie Goreng Rempah" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500">
+                    </div>
+                    <div class="p-4 flex-grow flex flex-col justify-between">
+                        <div>
+                            <div class="flex items-center justify-between text-[11px] text-[#4a1010]/80 font-sans mb-3 pb-2 border-b border-[#4a1010]/20">
+                                <span>Bakul Nusantara</span>
+                                <span>5 Days Ago</span>
+                            </div>
+                            <h3 class="font-serif-title text-2xl text-[#4a1010] font-semibold mb-2">
+                                Lorem Ipsum
+                            </h3>
+                            <p class="text-xs text-[#3b2316]/90 leading-relaxed font-sans mb-4">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                            </p>
+                        </div>
+                        <div class="pt-3 border-t border-[#4a1010]/20">
+                            <a href="#" class="text-xs font-serif-title text-[#4a1010] hover:text-[#e8a838] transition-colors font-medium">
+                                See Details &gt;
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Blog Card 3 -->
+                <div class="bg-[#f0e4d4] rounded-none border border-[#4a1010]/30 overflow-hidden shadow-sm flex flex-col text-left">
+                    <div class="h-48 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?q=80&w=600&auto=format&fit=crop" alt="Special Gourmet Dish" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500">
+                    </div>
+                    <div class="p-4 flex-grow flex flex-col justify-between">
+                        <div>
+                            <div class="flex items-center justify-between text-[11px] text-[#4a1010]/80 font-sans mb-3 pb-2 border-b border-[#4a1010]/20">
+                                <span>Bakul Nusantara</span>
+                                <span>5 Days Ago</span>
+                            </div>
+                            <h3 class="font-serif-title text-2xl text-[#4a1010] font-semibold mb-2">
+                                Lorem Ipsum
+                            </h3>
+                            <p class="text-xs text-[#3b2316]/90 leading-relaxed font-sans mb-4">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                            </p>
+                        </div>
+                        <div class="pt-3 border-t border-[#4a1010]/20">
+                            <a href="#" class="text-xs font-serif-title text-[#4a1010] hover:text-[#e8a838] transition-colors font-medium">
+                                See Details &gt;
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= BATIK STRIP 7 ================= -->
+    <div class="batik-strip"></div>
+
+    <!-- ================= 7. FOOTER (Matching Figma Reference Design) ================= -->
+    <footer class="bg-[#270707] py-16 px-6 md:px-16 text-amber-100/90 text-xs">
+        <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-12 gap-10 mb-12 text-left items-start">
+            <!-- Brand Column -->
+            <div class="md:col-span-4 space-y-8">
+                <div class="flex items-center space-x-3">
+                    <div class="w-12 h-12 rounded-full border border-amber-400/80 flex items-center justify-center bg-[#3b0d0d] shadow-sm">
+                        <svg viewBox="0 0 100 100" class="w-7 h-7 text-amber-400 fill-current">
                             <circle cx="50" cy="50" r="40" fill="none" stroke="#e8a838" stroke-width="4"/>
                             <path d="M50 15 L62 38 L85 42 L67 60 L73 85 L50 71 L27 85 L33 60 L15 42 L38 38 Z" fill="none" stroke="#e8a838" stroke-width="3"/>
                         </svg>
                     </div>
-                    <span class="font-serif-brand text-[#e8a838] font-bold uppercase tracking-wider text-base">BAKUL NUSANTARA</span>
+                    <span class="font-serif-brand text-amber-300 font-bold uppercase tracking-widest text-lg leading-tight">
+                        BAKUL<br>NUSANTARA
+                    </span>
                 </div>
-                <p class="text-amber-100/70 text-xs leading-relaxed">
-                    Jl. Senopati Raya No. 88, Kebayoran Baru, Jakarta Selatan
+                <p class="text-amber-100/60 text-xs font-serif-title">
+                    Copyright...
                 </p>
             </div>
 
-            <div class="md:col-span-3">
-                <h4 class="font-serif-brand text-[#e8a838] uppercase tracking-wider font-semibold mb-3">Explore</h4>
-                <ul class="space-y-1.5 text-stone-300 text-xs">
-                    <li><a href="#home" class="hover:text-amber-400 transition-colors">Home</a></li>
-                    <li><a href="#about" class="hover:text-amber-400 transition-colors">About Us</a></li>
-                    <li><a href="#menu" class="hover:text-amber-400 transition-colors">Menu</a></li>
-                    <li><a href="#experiences" class="hover:text-amber-400 transition-colors">Experiences</a></li>
+            <!-- Explore Navigation -->
+            <div class="md:col-span-3 space-y-3">
+                <h4 class="font-sans text-amber-100 font-semibold text-xs tracking-wider">Explore</h4>
+                <ul class="space-y-2 text-amber-100/80 text-xs font-sans">
+                    <li><a href="#home" class="hover:text-amber-300 transition-colors">Home</a></li>
+                    <li><a href="#menu" class="hover:text-amber-300 transition-colors">Menu</a></li>
+                    <li><a href="#experiences" class="hover:text-amber-300 transition-colors">Experiences</a></li>
+                    <li><a href="#about" class="hover:text-amber-300 transition-colors">About</a></li>
+                    <li><a href="#promo" class="hover:text-amber-300 transition-colors">Special Promo</a></li>
+                    <li><a href="#blog" class="hover:text-amber-300 transition-colors">Blog</a></li>
                 </ul>
             </div>
 
-            <div class="md:col-span-5">
-                <h4 class="font-serif-brand text-[#e8a838] uppercase tracking-wider font-semibold mb-3">Info</h4>
-                <p class="text-stone-300 text-xs leading-relaxed mb-4">
-                    Setiap hidangan Bakul Nusantara disajikan dengan dedikasi tinggi mengutamakan kualitas rasa rempah otentik khas warisan nusantara.
-                </p>
-            </div>
-        </div>
+            <!-- Visit Us & Social -->
+            <div class="md:col-span-5 space-y-6">
+                <div class="space-y-2">
+                    <h4 class="font-sans text-amber-100 font-semibold text-xs tracking-wider">Visit Us</h4>
+                    <p class="text-amber-100/80 text-xs leading-relaxed font-sans max-w-sm">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                    </p>
+                </div>
 
-        <div class="border-t border-amber-900/40 pt-6 text-center text-stone-400 text-[11px]">
-            &copy; {{ date('Y') }} Bakul Nusantara Restaurant. All rights reserved.
+                <div class="space-y-3">
+                    <h4 class="font-sans text-amber-100 font-semibold text-xs tracking-wider">Social</h4>
+                    <div class="flex items-center space-x-3 text-amber-100">
+                        <!-- TripAdvisor Icon / SVG -->
+                        <a href="#" aria-label="TripAdvisor" class="w-8 h-8 rounded bg-[#e8a838] text-[#270707] flex items-center justify-center hover:bg-amber-300 transition-colors">
+                            <i class="fa-solid fa-gem text-sm"></i>
+                        </a>
+                        <!-- Instagram -->
+                        <a href="#" aria-label="Instagram" class="w-8 h-8 rounded bg-[#e8a838] text-[#270707] flex items-center justify-center hover:bg-amber-300 transition-colors">
+                            <i class="fa-brands fa-instagram text-sm"></i>
+                        </a>
+                        <!-- Facebook -->
+                        <a href="#" aria-label="Facebook" class="w-8 h-8 rounded bg-[#e8a838] text-[#270707] flex items-center justify-center hover:bg-amber-300 transition-colors">
+                            <i class="fa-brands fa-facebook-f text-sm"></i>
+                        </a>
+                        <!-- TikTok -->
+                        <a href="#" aria-label="TikTok" class="w-8 h-8 rounded bg-[#e8a838] text-[#270707] flex items-center justify-center hover:bg-amber-300 transition-colors">
+                            <i class="fa-brands fa-tiktok text-sm"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
         </div>
     </footer>
 
