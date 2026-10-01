@@ -118,17 +118,43 @@
                 </div>
             </div>
 
-            <!-- Right Photo Column (Rectangular Full Split - No Rounded Corners, No Margin) -->
+            <!-- Right Photo Column (Interactive Full-Bleed Photo Slider) -->
             <div class="lg:col-span-6 h-[480px] lg:h-auto min-h-[500px] w-full relative group overflow-hidden m-0 p-0">
-                <img src="https://images.unsplash.com/photo-1544148103-0773bf10d330?q=80&w=1200&auto=format&fit=crop" alt="Bakul Nusantara Pavilion Dining Interior" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
-                <div class="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent"></div>
-                
-                <!-- Pagination Slider Indicator Bar -->
-                <div class="absolute bottom-6 right-8 lg:right-16 flex items-center space-x-2">
-                    <span class="w-12 h-1 bg-white rounded-full"></span>
-                    <span class="w-4 h-1 bg-white/60 rounded-full"></span>
-                    <span class="w-4 h-1 bg-white/60 rounded-full"></span>
-                    <span class="w-4 h-1 bg-white/60 rounded-full"></span>
+                <div id="heroSlider" class="w-full h-full relative overflow-hidden">
+                    <!-- Slide 1 -->
+                    <div class="hero-slide absolute inset-0 transition-opacity duration-700 opacity-100">
+                        <img src="https://images.unsplash.com/photo-1544148103-0773bf10d330?q=80&w=1200&auto=format&fit=crop" alt="Bakul Nusantara Pavilion Dining Interior" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+                    </div>
+                    <!-- Slide 2 -->
+                    <div class="hero-slide absolute inset-0 transition-opacity duration-700 opacity-0 pointer-events-none">
+                        <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?q=80&w=1200&auto=format&fit=crop" alt="Fine Dining Table Setting" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+                    </div>
+                    <!-- Slide 3 -->
+                    <div class="hero-slide absolute inset-0 transition-opacity duration-700 opacity-0 pointer-events-none">
+                        <img src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?q=80&w=1200&auto=format&fit=crop" alt="Authentic Indonesian Restaurant Ambience" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+                    </div>
+                    <!-- Slide 4 -->
+                    <div class="hero-slide absolute inset-0 transition-opacity duration-700 opacity-0 pointer-events-none">
+                        <img src="https://images.unsplash.com/photo-1544025162-d76694265947?q=80&w=1200&auto=format&fit=crop" alt="Chef Gourmet Presentation" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+                    </div>
+
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent pointer-events-none"></div>
+
+                    <!-- Slide Navigation Chevrons (Visible on Hover) -->
+                    <button onclick="prevHeroSlide()" aria-label="Previous Slide" class="absolute left-4 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-black/40 text-white flex items-center justify-center hover:bg-[#e8a838] hover:text-[#270706] transition-all opacity-0 group-hover:opacity-100 z-20 shadow-md">
+                        <i class="fa-solid fa-chevron-left text-sm"></i>
+                    </button>
+                    <button onclick="nextHeroSlide()" aria-label="Next Slide" class="absolute right-4 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-black/40 text-white flex items-center justify-center hover:bg-[#e8a838] hover:text-[#270706] transition-all opacity-0 group-hover:opacity-100 z-20 shadow-md">
+                        <i class="fa-solid fa-chevron-right text-sm"></i>
+                    </button>
+
+                    <!-- Interactive Pagination Slider Dash Indicator Bar -->
+                    <div class="absolute bottom-6 right-8 lg:right-16 flex items-center space-x-2 z-20">
+                        <button onclick="goToHeroSlide(0)" aria-label="Slide 1" class="hero-indicator h-1 rounded-full transition-all duration-300 w-12 bg-white"></button>
+                        <button onclick="goToHeroSlide(1)" aria-label="Slide 2" class="hero-indicator h-1 rounded-full transition-all duration-300 w-4 bg-white/50 hover:bg-white"></button>
+                        <button onclick="goToHeroSlide(2)" aria-label="Slide 3" class="hero-indicator h-1 rounded-full transition-all duration-300 w-4 bg-white/50 hover:bg-white"></button>
+                        <button onclick="goToHeroSlide(3)" aria-label="Slide 4" class="hero-indicator h-1 rounded-full transition-all duration-300 w-4 bg-white/50 hover:bg-white"></button>
+                    </div>
                 </div>
             </div>
         </div>
@@ -506,6 +532,63 @@
 
     <!-- JavaScript Handlers -->
     <script>
+        // Hero Photo Slider Logic
+        let currentHeroSlide = 0;
+        const totalHeroSlides = 4;
+        let heroSlideInterval = null;
+
+        function showHeroSlide(index) {
+            currentHeroSlide = (index + totalHeroSlides) % totalHeroSlides;
+            const slides = document.querySelectorAll('.hero-slide');
+            const indicators = document.querySelectorAll('.hero-indicator');
+
+            slides.forEach((slide, i) => {
+                if (i === currentHeroSlide) {
+                    slide.classList.remove('opacity-0', 'pointer-events-none');
+                    slide.classList.add('opacity-100');
+                } else {
+                    slide.classList.remove('opacity-100');
+                    slide.classList.add('opacity-0', 'pointer-events-none');
+                }
+            });
+
+            indicators.forEach((ind, i) => {
+                if (i === currentHeroSlide) {
+                    ind.classList.remove('w-4', 'bg-white/50');
+                    ind.classList.add('w-12', 'bg-white');
+                } else {
+                    ind.classList.remove('w-12', 'bg-white');
+                    ind.classList.add('w-4', 'bg-white/50');
+                }
+            });
+        }
+
+        function nextHeroSlide() {
+            showHeroSlide(currentHeroSlide + 1);
+            resetHeroTimer();
+        }
+
+        function prevHeroSlide() {
+            showHeroSlide(currentHeroSlide - 1);
+            resetHeroTimer();
+        }
+
+        function goToHeroSlide(index) {
+            showHeroSlide(index);
+            resetHeroTimer();
+        }
+
+        function resetHeroTimer() {
+            if (heroSlideInterval) clearInterval(heroSlideInterval);
+            heroSlideInterval = setInterval(() => {
+                showHeroSlide(currentHeroSlide + 1);
+            }, 4500);
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            resetHeroTimer();
+        });
+
         function toggleReservationModal() {
             document.getElementById('reservationModal').classList.toggle('hidden');
         }
