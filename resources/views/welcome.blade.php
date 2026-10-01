@@ -255,7 +255,7 @@
                 <div class="menu-page transition-all duration-700 opacity-100 block">
                     <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-10">
                         <!-- Card 1 -->
-                        <div class="bg-[#380c0c] rounded-2xl overflow-hidden shadow-card-luxury text-left border border-amber-500/30 flex flex-col group">
+                        <div class="bg-[#380c0c] rounded-none overflow-hidden shadow-card-luxury text-left border border-amber-500/30 flex flex-col group">
                             <div class="h-60 overflow-hidden relative">
                                 <img src="https://images.unsplash.com/photo-1544025162-d76694265947?q=80&w=600&auto=format&fit=crop" alt="Rendang Wagyu" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
                             </div>
@@ -273,7 +273,7 @@
                         </div>
 
                         <!-- Card 2 -->
-                        <div class="bg-[#380c0c] rounded-2xl overflow-hidden shadow-card-luxury text-left border border-amber-500/30 flex flex-col group">
+                        <div class="bg-[#380c0c] rounded-none overflow-hidden shadow-card-luxury text-left border border-amber-500/30 flex flex-col group">
                             <div class="h-60 overflow-hidden relative">
                                 <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?q=80&w=600&auto=format&fit=crop" alt="Bebek Betutu" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
                             </div>
@@ -291,7 +291,7 @@
                         </div>
 
                         <!-- Card 3 -->
-                        <div class="bg-[#380c0c] rounded-2xl overflow-hidden shadow-card-luxury text-left border border-amber-500/30 flex flex-col group">
+                        <div class="bg-[#380c0c] rounded-none overflow-hidden shadow-card-luxury text-left border border-amber-500/30 flex flex-col group">
                             <div class="h-60 overflow-hidden relative">
                                 <img src="https://images.unsplash.com/photo-1547592180-85f173990554?q=80&w=600&auto=format&fit=crop" alt="Sop Buntut" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
                             </div>
@@ -314,7 +314,7 @@
                 <div class="menu-page transition-all duration-700 opacity-0 hidden">
                     <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-10">
                         <!-- Card 4 -->
-                        <div class="bg-[#380c0c] rounded-2xl overflow-hidden shadow-card-luxury text-left border border-amber-500/30 flex flex-col group">
+                        <div class="bg-[#380c0c] rounded-none overflow-hidden shadow-card-luxury text-left border border-amber-500/30 flex flex-col group">
                             <div class="h-60 overflow-hidden relative">
                                 <img src="https://images.unsplash.com/photo-1555939594-58d7cb561ad1?q=80&w=600&auto=format&fit=crop" alt="Sate Maranggi" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
                             </div>
@@ -332,7 +332,7 @@
                         </div>
 
                         <!-- Card 5 -->
-                        <div class="bg-[#380c0c] rounded-2xl overflow-hidden shadow-card-luxury text-left border border-amber-500/30 flex flex-col group">
+                        <div class="bg-[#380c0c] rounded-none overflow-hidden shadow-card-luxury text-left border border-amber-500/30 flex flex-col group">
                             <div class="h-60 overflow-hidden relative">
                                 <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?q=80&w=600&auto=format&fit=crop" alt="Ayam Taliwang" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
                             </div>
@@ -350,7 +350,7 @@
                         </div>
 
                         <!-- Card 6 -->
-                        <div class="bg-[#380c0c] rounded-2xl overflow-hidden shadow-card-luxury text-left border border-amber-500/30 flex flex-col group">
+                        <div class="bg-[#380c0c] rounded-none overflow-hidden shadow-card-luxury text-left border border-amber-500/30 flex flex-col group">
                             <div class="h-60 overflow-hidden relative">
                                 <img src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?q=80&w=600&auto=format&fit=crop" alt="Ikan Kuah Pala" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
                             </div>
