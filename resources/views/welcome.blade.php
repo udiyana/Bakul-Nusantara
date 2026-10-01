@@ -279,8 +279,8 @@
     <div class="batik-strip"></div>
 
     <!-- ================= 4. SIGNATURE MENU SECTION ================= -->
-    <section id="menu" class="bg-[#270707] py-20 px-4 md:px-12 text-amber-100 border-b border-amber-900/40">
-        <div class="max-w-6xl mx-auto text-center">
+    <section id="menu" class="bg-[#270707] py-20 px-4 md:px-12 text-amber-100 border-b border-amber-900/40 relative">
+        <div class="max-w-6xl mx-auto text-center relative">
             <span class="text-xs uppercase tracking-[0.3em] text-[#e8a838] font-bold block mb-2">DELICIOUS TRADITION</span>
             <h2 class="font-serif-title text-4xl md:text-5xl text-amber-300 font-bold mb-4">
                 Try Our Signature Menu!
@@ -289,61 +289,149 @@
                 Setiap sajian di Bakul Nusantara dimasak sempurna mengutamakan keaslian cita rasa rempah pilihan.
             </p>
 
-            <!-- 3-Column Card Grid -->
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-10">
-                <!-- Card 1 -->
-                <div class="bg-[#380c0c] rounded-2xl overflow-hidden shadow-card-luxury text-left border border-amber-500/30 flex flex-col group">
-                    <div class="h-60 overflow-hidden relative">
-                        <img src="https://images.unsplash.com/photo-1544025162-d76694265947?q=80&w=600&auto=format&fit=crop" alt="Rendang Wagyu" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
-                    </div>
-                    <div class="p-6 flex-grow flex flex-col justify-between text-amber-100">
-                        <div>
-                            <h3 class="font-serif-title text-2xl font-bold text-[#e8a838] mb-2">Rendang Wagyu Tokusen</h3>
-                            <p class="text-xs text-amber-100/80 leading-relaxed mb-4">
-                                48-hour slow cooked Wagyu beef tenderloin in caramelised coconut milk and 18 signature Minang heirloom spices.
-                            </p>
+            <!-- Slider Outer Container with Side Arrows -->
+            <div class="relative px-2 md:px-10">
+                <!-- Outer Left Arrow Button -->
+                <button onclick="prevMenuPage()" aria-label="Previous Menu Page" class="absolute -left-2 md:left-0 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-[#380c0c] border border-amber-500/40 text-[#e8a838] flex items-center justify-center hover:bg-[#e8a838] hover:text-[#270706] transition-all z-20 shadow-lg">
+                    <i class="fa-solid fa-chevron-left text-sm"></i>
+                </button>
+
+                <!-- Outer Right Arrow Button -->
+                <button onclick="nextMenuPage()" aria-label="Next Menu Page" class="absolute -right-2 md:right-0 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-[#380c0c] border border-amber-500/40 text-[#e8a838] flex items-center justify-center hover:bg-[#e8a838] hover:text-[#270706] transition-all z-20 shadow-lg">
+                    <i class="fa-solid fa-chevron-right text-sm"></i>
+                </button>
+
+                <!-- Menu Page 1 (Active) -->
+                <div class="menu-page transition-all duration-700 opacity-100 block">
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-10">
+                        <!-- Card 1 -->
+                        <div class="bg-[#380c0c] rounded-2xl overflow-hidden shadow-card-luxury text-left border border-amber-500/30 flex flex-col group">
+                            <div class="h-60 overflow-hidden relative">
+                                <img src="https://images.unsplash.com/photo-1544025162-d76694265947?q=80&w=600&auto=format&fit=crop" alt="Rendang Wagyu" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                            </div>
+                            <div class="p-6 flex-grow flex flex-col justify-between text-amber-100">
+                                <div>
+                                    <h3 class="font-serif-title text-2xl font-bold text-[#e8a838] mb-2">Rendang Wagyu Tokusen</h3>
+                                    <p class="text-xs text-amber-100/80 leading-relaxed mb-4">
+                                        48-hour slow cooked Wagyu beef tenderloin in caramelised coconut milk and 18 signature Minang heirloom spices.
+                                    </p>
+                                </div>
+                                <button onclick="openDishDetail('Rendang Wagyu Tokusen', '285K', 'Padang, Sumatra Barat', '48-hour slow cooked Wagyu beef tenderloin in caramelised coconut milk and 18 signature Minang heirloom spices.')" class="text-xs font-semibold uppercase tracking-wider text-[#e8a838] hover:text-white transition-colors">
+                                    <span>See Details ></span>
+                                </button>
+                            </div>
                         </div>
-                        <button onclick="openDishDetail('Rendang Wagyu Tokusen', '285K', 'Padang, Sumatra Barat', '48-hour slow cooked Wagyu beef tenderloin in caramelised coconut milk and 18 signature Minang heirloom spices.')" class="text-xs font-semibold uppercase tracking-wider text-[#e8a838] hover:text-white transition-colors">
-                            <span>See Details ></span>
-                        </button>
+
+                        <!-- Card 2 -->
+                        <div class="bg-[#380c0c] rounded-2xl overflow-hidden shadow-card-luxury text-left border border-amber-500/30 flex flex-col group">
+                            <div class="h-60 overflow-hidden relative">
+                                <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?q=80&w=600&auto=format&fit=crop" alt="Bebek Betutu" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                            </div>
+                            <div class="p-6 flex-grow flex flex-col justify-between text-amber-100">
+                                <div>
+                                    <h3 class="font-serif-title text-2xl font-bold text-[#e8a838] mb-2">Bebek Betutu Gianyar</h3>
+                                    <p class="text-xs text-amber-100/80 leading-relaxed mb-4">
+                                        Traditional slow-roasted organic duck wrapped in banana leaves with aromatic Base Gede Balinese paste.
+                                    </p>
+                                </div>
+                                <button onclick="openDishDetail('Bebek Betutu Gianyar', '245K', 'Gianyar, Bali', 'Traditional slow-roasted organic duck wrapped in banana leaves with aromatic Base Gede Balinese paste.')" class="text-xs font-semibold uppercase tracking-wider text-[#e8a838] hover:text-white transition-colors">
+                                    <span>See Details ></span>
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- Card 3 -->
+                        <div class="bg-[#380c0c] rounded-2xl overflow-hidden shadow-card-luxury text-left border border-amber-500/30 flex flex-col group">
+                            <div class="h-60 overflow-hidden relative">
+                                <img src="https://images.unsplash.com/photo-1547592180-85f173990554?q=80&w=600&auto=format&fit=crop" alt="Sop Buntut" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                            </div>
+                            <div class="p-6 flex-grow flex flex-col justify-between text-amber-100">
+                                <div>
+                                    <h3 class="font-serif-title text-2xl font-bold text-[#e8a838] mb-2">Sop Buntut Sampurna</h3>
+                                    <p class="text-xs text-amber-100/80 leading-relaxed mb-4">
+                                        Rich oxtail broth infused with nutmeg, clove, sweet heirloom carrots, and crispy shallots.
+                                    </p>
+                                </div>
+                                <button onclick="openDishDetail('Sop Buntut Sampurna', '265K', 'Batavia / Jakarta', 'Rich oxtail broth infused with nutmeg, clove, sweet heirloom carrots, and crispy shallots.')" class="text-xs font-semibold uppercase tracking-wider text-[#e8a838] hover:text-white transition-colors">
+                                    <span>See Details ></span>
+                                </button>
+                            </div>
+                        </div>
                     </div>
                 </div>
 
-                <!-- Card 2 -->
-                <div class="bg-[#380c0c] rounded-2xl overflow-hidden shadow-card-luxury text-left border border-amber-500/30 flex flex-col group">
-                    <div class="h-60 overflow-hidden relative">
-                        <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?q=80&w=600&auto=format&fit=crop" alt="Bebek Betutu" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
-                    </div>
-                    <div class="p-6 flex-grow flex flex-col justify-between text-amber-100">
-                        <div>
-                            <h3 class="font-serif-title text-2xl font-bold text-[#e8a838] mb-2">Bebek Betutu Gianyar</h3>
-                            <p class="text-xs text-amber-100/80 leading-relaxed mb-4">
-                                Traditional slow-roasted organic duck wrapped in banana leaves with aromatic Base Gede Balinese paste.
-                            </p>
+                <!-- Menu Page 2 (Hidden by default) -->
+                <div class="menu-page transition-all duration-700 opacity-0 hidden">
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-10">
+                        <!-- Card 4 -->
+                        <div class="bg-[#380c0c] rounded-2xl overflow-hidden shadow-card-luxury text-left border border-amber-500/30 flex flex-col group">
+                            <div class="h-60 overflow-hidden relative">
+                                <img src="https://images.unsplash.com/photo-1555939594-58d7cb561ad1?q=80&w=600&auto=format&fit=crop" alt="Sate Maranggi" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                            </div>
+                            <div class="p-6 flex-grow flex flex-col justify-between text-amber-100">
+                                <div>
+                                    <h3 class="font-serif-title text-2xl font-bold text-[#e8a838] mb-2">Sate Maranggi Wagyu</h3>
+                                    <p class="text-xs text-amber-100/80 leading-relaxed mb-4">
+                                        Charbroiled Wagyu beef skewers marinated in pineapple juice, sweet coriander soy, and sambal kecap.
+                                    </p>
+                                </div>
+                                <button onclick="openDishDetail('Sate Maranggi Wagyu', '225K', 'Purwakarta, Jawa Barat', 'Charbroiled Wagyu beef skewers marinated in pineapple juice, sweet coriander soy, and sambal kecap.')" class="text-xs font-semibold uppercase tracking-wider text-[#e8a838] hover:text-white transition-colors">
+                                    <span>See Details ></span>
+                                </button>
+                            </div>
                         </div>
-                        <button onclick="openDishDetail('Bebek Betutu Gianyar', '245K', 'Gianyar, Bali', 'Traditional slow-roasted organic duck wrapped in banana leaves with aromatic Base Gede Balinese paste.')" class="text-xs font-semibold uppercase tracking-wider text-[#e8a838] hover:text-white transition-colors">
-                            <span>See Details ></span>
-                        </button>
-                    </div>
-                </div>
 
-                <!-- Card 3 -->
-                <div class="bg-[#380c0c] rounded-2xl overflow-hidden shadow-card-luxury text-left border border-amber-500/30 flex flex-col group">
-                    <div class="h-60 overflow-hidden relative">
-                        <img src="https://images.unsplash.com/photo-1547592180-85f173990554?q=80&w=600&auto=format&fit=crop" alt="Sop Buntut" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
-                    </div>
-                    <div class="p-6 flex-grow flex flex-col justify-between text-amber-100">
-                        <div>
-                            <h3 class="font-serif-title text-2xl font-bold text-[#e8a838] mb-2">Sop Buntut Sampurna</h3>
-                            <p class="text-xs text-amber-100/80 leading-relaxed mb-4">
-                                Rich oxtail broth infused with nutmeg, clove, sweet heirloom carrots, and crispy shallots.
-                            </p>
+                        <!-- Card 5 -->
+                        <div class="bg-[#380c0c] rounded-2xl overflow-hidden shadow-card-luxury text-left border border-amber-500/30 flex flex-col group">
+                            <div class="h-60 overflow-hidden relative">
+                                <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?q=80&w=600&auto=format&fit=crop" alt="Ayam Taliwang" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                            </div>
+                            <div class="p-6 flex-grow flex flex-col justify-between text-amber-100">
+                                <div>
+                                    <h3 class="font-serif-title text-2xl font-bold text-[#e8a838] mb-2">Ayam Taliwang Lombok</h3>
+                                    <p class="text-xs text-amber-100/80 leading-relaxed mb-4">
+                                        Free-range young chicken flame-grilled with fiery shrimp paste, kaffir lime, and roasted chili oil.
+                                    </p>
+                                </div>
+                                <button onclick="openDishDetail('Ayam Taliwang Lombok', '195K', 'Mataram, Lombok', 'Free-range young chicken flame-grilled with fiery shrimp paste, kaffir lime, and roasted chili oil.')" class="text-xs font-semibold uppercase tracking-wider text-[#e8a838] hover:text-white transition-colors">
+                                    <span>See Details ></span>
+                                </button>
+                            </div>
                         </div>
-                        <button onclick="openDishDetail('Sop Buntut Sampurna', '265K', 'Batavia / Jakarta', 'Rich oxtail broth infused with nutmeg, clove, sweet heirloom carrots, and crispy shallots.')" class="text-xs font-semibold uppercase tracking-wider text-[#e8a838] hover:text-white transition-colors">
-                            <span>See Details ></span>
-                        </button>
+
+                        <!-- Card 6 -->
+                        <div class="bg-[#380c0c] rounded-2xl overflow-hidden shadow-card-luxury text-left border border-amber-500/30 flex flex-col group">
+                            <div class="h-60 overflow-hidden relative">
+                                <img src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?q=80&w=600&auto=format&fit=crop" alt="Ikan Kuah Pala" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                            </div>
+                            <div class="p-6 flex-grow flex flex-col justify-between text-amber-100">
+                                <div>
+                                    <h3 class="font-serif-title text-2xl font-bold text-[#e8a838] mb-2">Ikan Kuah Pala Banda</h3>
+                                    <p class="text-xs text-amber-100/80 leading-relaxed mb-4">
+                                        Fresh red snapper poached in heirloom Banda nutmeg broth with bird's eye chili and lemon basil.
+                                    </p>
+                                </div>
+                                <button onclick="openDishDetail('Ikan Kuah Pala Banda', '255K', 'Banda Neira, Maluku', 'Fresh red snapper poached in heirloom Banda nutmeg broth with bird\'s eye chili and lemon basil.')" class="text-xs font-semibold uppercase tracking-wider text-[#e8a838] hover:text-white transition-colors">
+                                    <span>See Details ></span>
+                                </button>
+                            </div>
+                        </div>
                     </div>
                 </div>
+            </div>
+
+            <!-- Slider Pagination Controls -->
+            <div class="flex items-center justify-center space-x-6 mb-8">
+                <button onclick="prevMenuPage()" aria-label="Previous Menu Page" class="w-10 h-10 rounded-full border border-amber-400/40 text-amber-400 hover:bg-[#e8a838] hover:text-[#270706] flex items-center justify-center transition-colors">
+                    <i class="fa-solid fa-chevron-left"></i>
+                </button>
+                <div class="flex items-center space-x-3">
+                    <button onclick="goToMenuPage(0)" aria-label="Menu Page 1" class="menu-indicator h-1 rounded-full transition-all duration-300 w-8 bg-[#e8a838]"></button>
+                    <button onclick="goToMenuPage(1)" aria-label="Menu Page 2" class="menu-indicator h-1 rounded-full transition-all duration-300 w-4 bg-amber-400/40 hover:bg-amber-400"></button>
+                </div>
+                <button onclick="nextMenuPage()" aria-label="Next Menu Page" class="w-10 h-10 rounded-full border border-amber-400/40 text-amber-400 hover:bg-[#e8a838] hover:text-[#270706] flex items-center justify-center transition-colors">
+                    <i class="fa-solid fa-chevron-right"></i>
+                </button>
             </div>
 
             <!-- See All Menu Button -->
@@ -532,6 +620,48 @@
 
     <!-- JavaScript Handlers -->
     <script>
+        // Signature Menu Slider Logic
+        let currentMenuPage = 0;
+        const totalMenuPages = 2;
+
+        function showMenuPage(index) {
+            currentMenuPage = (index + totalMenuPages) % totalMenuPages;
+            const pages = document.querySelectorAll('.menu-page');
+            const indicators = document.querySelectorAll('.menu-indicator');
+
+            pages.forEach((page, i) => {
+                if (i === currentMenuPage) {
+                    page.classList.remove('hidden', 'opacity-0');
+                    page.classList.add('block', 'opacity-100');
+                } else {
+                    page.classList.remove('block', 'opacity-100');
+                    page.classList.add('hidden', 'opacity-0');
+                }
+            });
+
+            indicators.forEach((ind, i) => {
+                if (i === currentMenuPage) {
+                    ind.classList.remove('w-4', 'bg-amber-400/40');
+                    ind.classList.add('w-8', 'bg-[#e8a838]');
+                } else {
+                    ind.classList.remove('w-8', 'bg-[#e8a838]');
+                    ind.classList.add('w-4', 'bg-amber-400/40');
+                }
+            });
+        }
+
+        function nextMenuPage() {
+            showMenuPage(currentMenuPage + 1);
+        }
+
+        function prevMenuPage() {
+            showMenuPage(currentMenuPage - 1);
+        }
+
+        function goToMenuPage(index) {
+            showMenuPage(index);
+        }
+
         // Hero Photo Slider Logic
         let currentHeroSlide = 0;
         const totalHeroSlides = 4;
