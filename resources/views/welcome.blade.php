@@ -413,33 +413,55 @@
     <!-- ================= BATIK STRIP 4 ================= -->
     <div class="batik-strip"></div>
 
-    <!-- ================= 5. EXPERIENCE SECTION ================= -->
+    <!-- ================= 5. EXPERIENCE SECTION (Matching Figma Staggered Layout & Carousel) ================= -->
     <section id="experiences" class="bg-batik-watermark py-20 px-4 md:px-12 text-stone-900 border-b border-amber-900/20">
         <div class="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-            <div class="lg:col-span-6 space-y-6 text-left">
-                <span class="text-xs uppercase tracking-[0.25em] text-[#4a1010] font-bold">Unforgettable Moments</span>
-                <h2 class="font-serif-title text-4xl md:text-5xl text-[#4a1010] font-bold tracking-tight">
-                    Experiences
+            <!-- Left Text Content -->
+            <div class="lg:col-span-5 space-y-6 text-left">
+                <div class="inline-block pb-1 border-b border-[#4a1010]/30">
+                    <span class="text-xs uppercase tracking-[0.2em] text-[#4a1010] font-semibold">Unforgettable Moments</span>
+                </div>
+                <h2 class="font-serif-title text-4xl md:text-5xl text-[#4a1010] font-semibold tracking-tight leading-tight">
+                    Experience
                 </h2>
                 <p class="text-xs md:text-sm text-[#3b2316] leading-relaxed font-sans">
-                    Nikmati kelezatan kuliner eksklusif di ruang private dining Bakul Nusantara berarsitektur adat Jawa dan Bali. Setiap sudut restoran kami dirancang untuk memberikan kenyamanan rasa dan suasana hangat nusantara.
+                    Bakoel Nusantara offers far more than just a meal; it serves as the perfect setting to celebrate life's most cherished moments. Whether it is a memorable surprise birthday party, an intimate candlelit dinner for two perfect for Valentine's Day or anniversaries amidst antique teak architecture, or a prestigious private business gathering, we ensure every moment is deeply personal and meaningful. Accompanied by the soothing sounds of contemporary ethnic instrumental music and the warm hospitality characteristic of the archipelago, we create an experience that is truly special.
                 </p>
                 <div class="pt-2">
-                    <button onclick="toggleReservationModal()" class="px-7 py-3 bg-[#4a1010] hover:bg-[#3b0d0d] text-amber-300 font-semibold text-xs uppercase tracking-wider rounded shadow transition-all flex items-center space-x-2 border border-amber-500/40">
-                        <span>See Complete Details -></span>
+                    <button onclick="toggleReservationModal()" class="px-7 py-3 bg-[#460904] hover:bg-[#320603] text-[#e8a838] font-bold text-xs uppercase tracking-wider rounded shadow transition-all flex items-center space-x-2 border border-amber-500/30 hover:scale-105">
+                        <span>See Details</span>
+                        <i class="fa-solid fa-arrow-right text-xs"></i>
                     </button>
                 </div>
             </div>
 
-            <div class="lg:col-span-6 grid grid-cols-3 gap-3 h-80">
-                <div class="overflow-hidden rounded-xl shadow-card-luxury border border-[#4a1010]/20">
-                    <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?q=80&w=400&auto=format&fit=crop" alt="Experience 1" class="w-full h-full object-cover hover:scale-105 transition-all duration-500">
-                </div>
-                <div class="overflow-hidden rounded-xl shadow-card-luxury border border-[#4a1010]/20 mt-6">
-                    <img src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?q=80&w=400&auto=format&fit=crop" alt="Experience 2" class="w-full h-full object-cover hover:scale-105 transition-all duration-500">
-                </div>
-                <div class="overflow-hidden rounded-xl shadow-card-luxury border border-[#4a1010]/20">
-                    <img src="https://images.unsplash.com/photo-1544025162-d76694265947?q=80&w=400&auto=format&fit=crop" alt="Experience 3" class="w-full h-full object-cover hover:scale-105 transition-all duration-500">
+            <!-- Right Staggered Interactive Swipe Photo Gallery (3 Columns of Different Vertical Heights) -->
+            <div class="lg:col-span-7 relative">
+                <!-- Gallery Carousel Swipe Container -->
+                <div id="experienceSwipeGallery" class="grid grid-cols-3 gap-3 md:gap-4 items-center h-[420px] md:h-[480px] select-none overflow-hidden" onpointerdown="startExpDrag(event)" onpointermove="moveExpDrag(event)" onpointerup="endExpDrag(event)" onpointerleave="endExpDrag(event)">
+                    <!-- Column 1: Tall Vertical Image -->
+                    <div class="exp-col-1 h-full overflow-hidden shadow-card-luxury rounded-none border border-[#4a1010]/20 relative cursor-pointer group" onclick="rotateExpPhotos(1)">
+                        <img id="expImg1" src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?q=80&w=600&auto=format&fit=crop" alt="Experience Traditional Teak Dining" class="w-full h-full object-cover transition-all duration-700 group-hover:scale-105">
+                        <div class="absolute inset-0 bg-black/0 group-hover:bg-black/15 transition-all duration-300 flex items-center justify-center">
+                            <i class="fa-solid fa-chevron-right text-white text-2xl opacity-0 group-hover:opacity-80 transition-opacity duration-300 drop-shadow-lg"></i>
+                        </div>
+                    </div>
+
+                    <!-- Column 2: Short Narrow Center Vertical Image -->
+                    <div class="exp-col-2 h-[65%] my-auto overflow-hidden shadow-card-luxury rounded-none border border-[#4a1010]/20 relative cursor-pointer group" onclick="rotateExpPhotos(1)">
+                        <img id="expImg2" src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?q=80&w=600&auto=format&fit=crop" alt="Experience Fine Gourmet Dish" class="w-full h-full object-cover transition-all duration-700 group-hover:scale-105">
+                        <div class="absolute inset-0 bg-black/0 group-hover:bg-black/15 transition-all duration-300 flex items-center justify-center">
+                            <i class="fa-solid fa-chevron-right text-white text-xl opacity-0 group-hover:opacity-80 transition-opacity duration-300 drop-shadow-lg"></i>
+                        </div>
+                    </div>
+
+                    <!-- Column 3: Medium Tall Outer Image -->
+                    <div class="exp-col-3 h-[85%] overflow-hidden shadow-card-luxury rounded-none border border-[#4a1010]/20 relative cursor-pointer group" onclick="rotateExpPhotos(1)">
+                        <img id="expImg3" src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?q=80&w=600&auto=format&fit=crop" alt="Experience Resort Ambience" class="w-full h-full object-cover transition-all duration-700 group-hover:scale-105">
+                        <div class="absolute inset-0 bg-black/0 group-hover:bg-black/15 transition-all duration-300 flex items-center justify-center">
+                            <i class="fa-solid fa-chevron-right text-white text-xl opacity-0 group-hover:opacity-80 transition-opacity duration-300 drop-shadow-lg"></i>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -801,6 +823,72 @@
 
         function goToMenuPage(index) {
             showMenuPage(index);
+        }
+
+        // Experience Section Carousel & Swipe Logic
+        const expPhotoPool = [
+            "https://images.unsplash.com/photo-1555396273-367ea4eb4db5?q=80&w=600&auto=format&fit=crop",
+            "https://images.unsplash.com/photo-1504674900247-0877df9cc836?q=80&w=600&auto=format&fit=crop",
+            "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?q=80&w=600&auto=format&fit=crop",
+            "https://images.unsplash.com/photo-1544025162-d76694265947?q=80&w=600&auto=format&fit=crop",
+            "https://images.unsplash.com/photo-1512621776951-a57141f2eefd?q=80&w=600&auto=format&fit=crop"
+        ];
+        let expPhotoIndex = 0;
+
+        function rotateExpPhotos(direction) {
+            expPhotoIndex = (expPhotoIndex + direction + expPhotoPool.length) % expPhotoPool.length;
+            const img1 = document.getElementById('expImg1');
+            const img2 = document.getElementById('expImg2');
+            const img3 = document.getElementById('expImg3');
+
+            if (img1 && img2 && img3) {
+                img1.style.opacity = '0.3';
+                img2.style.opacity = '0.3';
+                img3.style.opacity = '0.3';
+
+                setTimeout(() => {
+                    img1.src = expPhotoPool[expPhotoIndex % expPhotoPool.length];
+                    img2.src = expPhotoPool[(expPhotoIndex + 1) % expPhotoPool.length];
+                    img3.src = expPhotoPool[(expPhotoIndex + 2) % expPhotoPool.length];
+
+                    img1.style.opacity = '1';
+                    img2.style.opacity = '1';
+                    img3.style.opacity = '1';
+                }, 250);
+            }
+        }
+
+        let isExpDragging = false;
+        let expDragMoved = false;
+        let expStartX = 0;
+
+        function startExpDrag(e) {
+            isExpDragging = true;
+            expDragMoved = false;
+            expStartX = e.clientX || (e.touches && e.touches[0].clientX) || 0;
+        }
+
+        function moveExpDrag(e) {
+            if (!isExpDragging) return;
+            const currentX = e.clientX || (e.touches && e.touches[0].clientX) || 0;
+            if (Math.abs(currentX - expStartX) > 8) {
+                expDragMoved = true;
+            }
+        }
+
+        function endExpDrag(e) {
+            if (!isExpDragging) return;
+            isExpDragging = false;
+            if (!expDragMoved) return; // klik biasa, biarkan onclick berjalan
+            expDragMoved = false;
+            const endX = e.clientX || (e.changedTouches && e.changedTouches[0].clientX) || 0;
+            const diffX = endX - expStartX;
+
+            if (diffX > 40) {
+                rotateExpPhotos(-1);
+            } else if (diffX < -40) {
+                rotateExpPhotos(1);
+            }
         }
 
         // Hero Photo Slider Logic
