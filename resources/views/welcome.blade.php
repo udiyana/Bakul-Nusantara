@@ -169,55 +169,31 @@
             <span class="text-xs uppercase tracking-[0.3em] text-[#4a1010] font-bold">Warisan Kekayaan Cita Rasa Nusantara</span>
             <h2 class="font-serif-title text-3xl md:text-5xl text-[#4a1010] font-bold mt-1 mb-8">Peta Kuliner Mahakarya Nusantara</h2>
 
-            <!-- Detailed Red Batik Textured Map SVG -->
-            <div class="w-full max-w-5xl mx-auto p-4 md:p-8 bg-[#f5e7ce]/70 border border-[#4a1010]/20 rounded-2xl shadow-inner relative">
-                <svg viewBox="0 0 1000 420" class="w-full h-auto drop-shadow-lg" xmlns="http://www.w3.org/2000/svg">
-                    <defs>
-                        <!-- Pattern Texture for Islands -->
-                        <pattern id="batikMapPattern" width="12" height="12" patternUnits="userSpaceOnUse">
-                            <rect width="12" height="12" fill="#701214"/>
-                            <path d="M0 0 L12 12 M12 0 L0 12" stroke="#4a0b0d" stroke-width="1.2"/>
-                            <circle cx="6" cy="6" r="2" fill="#8c191c"/>
-                        </pattern>
-                    </defs>
+            <!-- Indonesia Batik Map Container -->
+            <div class="w-full max-w-5xl mx-auto p-4 md:p-8 relative">
+                <div class="relative w-full overflow-hidden">
+                    <img src="{{ asset('images/indonesia-map.png') }}" alt="Peta Kuliner Batik Nusantara" class="w-full h-auto drop-shadow-md mx-auto object-contain max-h-[480px]">
 
-                    <!-- Sumatra -->
-                    <g class="island-path" onclick="showRegionInfo('Sumatra', 'Rendang Wagyu Tokusen & Gulai Kepala Ikan')">
-                        <path fill="url(#batikMapPattern)" stroke="#4a0b0d" stroke-width="2" d="M120,80 C150,110 180,140 220,180 C240,200 250,220 250,230 C230,245 200,250 170,230 C130,195 110,150 100,140 C105,115 110,95 120,80 Z"/>
-                    </g>
+                    <!-- SVG Hotspot Overlay for Interactive Region Clicks -->
+                    <svg viewBox="0 0 1000 420" class="absolute inset-0 w-full h-full pointer-events-auto" xmlns="http://www.w3.org/2000/svg">
+                        <!-- Sumatra -->
+                        <path class="island-path opacity-0 hover:opacity-30 fill-[#e8a838]" d="M120,80 C150,110 180,140 220,180 C240,200 250,220 250,230 C230,245 200,250 170,230 C130,195 110,150 100,140 C105,115 110,95 120,80 Z" onclick="showRegionInfo('Sumatra', 'Rendang Wagyu Tokusen & Gulai Kepala Ikan')"/>
+                        <!-- Jawa -->
+                        <path class="island-path opacity-0 hover:opacity-30 fill-[#e8a838]" d="M260,280 L350,285 L420,290 L440,300 L380,310 L310,305 L250,295 Z" onclick="showRegionInfo('Jawa', 'Sate Maranggi & Sop Buntut Sampurna')"/>
+                        <!-- Kalimantan -->
+                        <path class="island-path opacity-0 hover:opacity-30 fill-[#e8a838]" d="M380,100 C430,90 470,85 480,90 C510,120 520,150 520,160 C500,200 480,220 450,220 C410,215 390,210 370,160 Z" onclick="showRegionInfo('Kalimantan', 'Soto Banjar Rempah & Patin Baunjat')"/>
+                        <!-- Sulawesi -->
+                        <path class="island-path opacity-0 hover:opacity-30 fill-[#e8a838]" d="M560,120 C580,125 610,130 610,130 C600,160 600,180 600,180 C620,185 640,190 640,190 C620,205 590,220 590,220 C570,240 560,250 560,250 C550,200 550,170 550,170 Z" onclick="showRegionInfo('Sulawesi', 'Coto Makassar & Ayam Rica-Rica Manado')"/>
+                        <!-- Bali & Nusa Tenggara -->
+                        <path class="island-path opacity-0 hover:opacity-30 fill-[#e8a838]" d="M460,300 L500,300 L540,305 L600,310 L640,305 L640,315 L460,315 Z" onclick="showRegionInfo('Bali & Nusa Tenggara', 'Bebek Betutu & Ayam Taliwang')"/>
+                        <!-- Maluku -->
+                        <path class="island-path opacity-0 hover:opacity-30 fill-[#e8a838]" d="M680,150 C710,140 730,140 730,140 C735,170 740,210 740,210 C715,215 690,220 690,220 Z" onclick="showRegionInfo('Maluku', 'Ikan Kuah Pala Banda & Sambal Dabu')"/>
+                        <!-- Papua -->
+                        <path class="island-path opacity-0 hover:opacity-30 fill-[#e8a838]" d="M780,160 C840,150 900,145 920,150 C940,190 950,240 950,240 C915,265 880,280 880,280 C840,260 800,240 800,240 Z" onclick="showRegionInfo('Papua', 'Papeda Ikan Kuah Kuning & Udang Selingkar')"/>
+                    </svg>
+                </div>
 
-                    <!-- Java -->
-                    <g class="island-path" onclick="showRegionInfo('Jawa', 'Sate Maranggi & Sop Buntut Sampurna')">
-                        <path fill="url(#batikMapPattern)" stroke="#4a0b0d" stroke-width="2" d="M260,280 L350,285 L420,290 L440,300 L380,310 L310,305 L250,295 Z"/>
-                    </g>
-
-                    <!-- Kalimantan -->
-                    <g class="island-path" onclick="showRegionInfo('Kalimantan', 'Soto Banjar Rempah & Patin Baunjat')">
-                        <path fill="url(#batikMapPattern)" stroke="#4a0b0d" stroke-width="2" d="M380,100 C430,90 470,85 480,90 C510,120 520,150 520,160 C500,200 480,220 450,220 C410,215 390,210 370,160 Z"/>
-                    </g>
-
-                    <!-- Sulawesi -->
-                    <g class="island-path" onclick="showRegionInfo('Sulawesi', 'Coto Makassar & Ayam Rica-Rica Manado')">
-                        <path fill="url(#batikMapPattern)" stroke="#4a0b0d" stroke-width="2" d="M560,120 C580,125 610,130 610,130 C600,160 600,180 600,180 C620,185 640,190 640,190 C620,205 590,220 590,220 C570,240 560,250 560,250 C550,200 550,170 550,170 Z"/>
-                    </g>
-
-                    <!-- Bali & Nusa Tenggara -->
-                    <g class="island-path" onclick="showRegionInfo('Bali & Nusa Tenggara', 'Bebek Betutu & Ayam Taliwang')">
-                        <path fill="url(#batikMapPattern)" stroke="#4a0b0d" stroke-width="2" d="M460,300 L500,300 L540,305 L600,310 L640,305 L640,315 L460,315 Z"/>
-                    </g>
-
-                    <!-- Maluku -->
-                    <g class="island-path" onclick="showRegionInfo('Maluku', 'Ikan Kuah Pala Banda & Sambal Dabu')">
-                        <path fill="url(#batikMapPattern)" stroke="#4a0b0d" stroke-width="2" d="M680,150 C710,140 730,140 730,140 C735,170 740,210 740,210 C715,215 690,220 690,220 Z"/>
-                    </g>
-
-                    <!-- Papua -->
-                    <g class="island-path" onclick="showRegionInfo('Papua', 'Papeda Ikan Kuah Kuning & Udang Selingkar')">
-                        <path fill="url(#batikMapPattern)" stroke="#4a0b0d" stroke-width="2" d="M780,160 C840,150 900,145 920,150 C940,190 950,240 950,240 C915,265 880,280 880,280 C840,260 800,240 800,240 Z"/>
-                    </g>
-                </svg>
-
-                <div id="regionToast" class="mt-4 p-3 bg-[#4a1010] text-amber-200 rounded-lg text-xs md:text-sm font-medium inline-block shadow-md">
+                <div id="regionToast" class="mt-6 p-3 bg-[#4a1010] text-amber-200 rounded-lg text-xs md:text-sm font-medium inline-block shadow-md">
                     <i class="fa-solid fa-location-dot text-[#e8a838] mr-2"></i>
                     <span id="regionText">Klik pada pulau untuk menjelajahi kelezatan rempah khas daerah tersebut di Bakul Nusantara.</span>
                 </div>
@@ -448,7 +424,7 @@
     <section id="experiences" class="bg-batik-watermark py-20 px-4 md:px-12 text-stone-900 border-b border-amber-900/20">
         <div class="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
             <div class="lg:col-span-6 space-y-6 text-left">
-                <span class="text-xs uppercase tracking-[0.25em] text-[#4a1010] font-bold">Tastes of the Heritage</span>
+                <span class="text-xs uppercase tracking-[0.25em] text-[#4a1010] font-bold">Unforgettable Moments</span>
                 <h2 class="font-serif-title text-4xl md:text-5xl text-[#4a1010] font-bold tracking-tight">
                     Experiences
                 </h2>
