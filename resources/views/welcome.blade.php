@@ -85,10 +85,10 @@
     </header>
 
     <!-- ================= 1. SPLIT HERO SECTION ================= -->
-    <section id="home" class="relative min-h-screen bg-cream-smooth text-[#270706] pt-24 pb-16 px-4 md:px-12 flex items-center">
-        <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-8 items-center w-full">
+    <section id="home" class="relative min-h-[calc(100vh-24px)] bg-cream-smooth text-[#270706] pt-24 pb-12 lg:pb-0 px-0 flex items-center overflow-hidden">
+        <div class="w-full grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-0 items-center">
             <!-- Left Narrative Column (Matching Reference Design Exactly) -->
-            <div class="lg:col-span-6 space-y-6 text-left pr-0 lg:pr-6">
+            <div class="lg:col-span-6 space-y-6 text-left pl-6 md:pl-16 lg:pl-20 pr-6 lg:pr-12 py-8">
                 <!-- Tagline Badge with Side Accent Lines -->
                 <div class="inline-flex items-center space-x-3 border-b border-t border-[#4a1010]/30 py-1.5 px-3">
                     <span class="font-serif-title text-xs md:text-sm tracking-[0.2em] uppercase text-[#4a1010] font-bold">An Authentic Gastronomic Journey</span>
@@ -118,17 +118,19 @@
                 </div>
             </div>
 
-            <!-- Right Photo Column (Warm Teak Dining Pavilion) -->
-            <div class="lg:col-span-6 h-[480px] md:h-[580px] overflow-hidden rounded-2xl shadow-card-luxury border border-[#4a1010]/20 relative group">
-                <img src="https://images.unsplash.com/photo-1544148103-0773bf10d330?q=80&w=1200&auto=format&fit=crop" alt="Bakul Nusantara Pavilion Dining Interior" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
-                <div class="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent"></div>
-                
-                <!-- Pagination Slider Indicator Bar -->
-                <div class="absolute bottom-6 left-1/2 transform -translate-x-1/2 flex items-center space-x-2">
-                    <span class="w-12 h-1 bg-white rounded-full"></span>
-                    <span class="w-4 h-1 bg-white/50 rounded-full"></span>
-                    <span class="w-4 h-1 bg-white/50 rounded-full"></span>
-                    <span class="w-4 h-1 bg-white/50 rounded-full"></span>
+            <!-- Right Photo Column (Filling Right Side of Website) -->
+            <div class="lg:col-span-6 h-[480px] lg:h-[620px] w-full relative group overflow-hidden pr-4 lg:pr-0 pl-4 lg:pl-0">
+                <div class="w-full h-full relative overflow-hidden rounded-2xl lg:rounded-none lg:rounded-l-3xl shadow-card-luxury border border-[#4a1010]/20">
+                    <img src="https://images.unsplash.com/photo-1544148103-0773bf10d330?q=80&w=1200&auto=format&fit=crop" alt="Bakul Nusantara Pavilion Dining Interior" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent"></div>
+                    
+                    <!-- Pagination Slider Indicator Bar -->
+                    <div class="absolute bottom-6 left-1/2 transform -translate-x-1/2 flex items-center space-x-2">
+                        <span class="w-12 h-1 bg-white rounded-full"></span>
+                        <span class="w-4 h-1 bg-white/50 rounded-full"></span>
+                        <span class="w-4 h-1 bg-white/50 rounded-full"></span>
+                        <span class="w-4 h-1 bg-white/50 rounded-full"></span>
+                    </div>
                 </div>
             </div>
         </div>
