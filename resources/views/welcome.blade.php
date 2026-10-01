@@ -164,38 +164,12 @@
     <div class="batik-strip"></div>
 
     <!-- ================= 2. MAP OF INDONESIA SECTION ================= -->
-    <section class="bg-batik-watermark py-20 px-4 text-stone-900 border-b border-amber-900/20 relative overflow-hidden">
+    <section class="bg-batik-watermark py-16 px-4 text-stone-900 border-b border-amber-900/20 relative overflow-hidden">
         <div class="max-w-6xl mx-auto text-center relative z-10">
-            <span class="text-xs uppercase tracking-[0.3em] text-[#4a1010] font-bold">Warisan Kekayaan Cita Rasa Nusantara</span>
-            <h2 class="font-serif-title text-3xl md:text-5xl text-[#4a1010] font-bold mt-1 mb-8">Peta Kuliner Mahakarya Nusantara</h2>
-
             <!-- Indonesia Batik Map Container -->
             <div class="w-full max-w-5xl mx-auto p-4 md:p-8 relative">
                 <div class="relative w-full overflow-hidden">
-                    <img src="{{ asset('images/indonesia-map.png') }}" alt="Peta Kuliner Batik Nusantara" class="w-full h-auto drop-shadow-md mx-auto object-contain max-h-[480px]">
-
-                    <!-- SVG Hotspot Overlay for Interactive Region Clicks -->
-                    <svg viewBox="0 0 1000 420" class="absolute inset-0 w-full h-full pointer-events-auto" xmlns="http://www.w3.org/2000/svg">
-                        <!-- Sumatra -->
-                        <path class="island-path opacity-0 hover:opacity-30 fill-[#e8a838]" d="M120,80 C150,110 180,140 220,180 C240,200 250,220 250,230 C230,245 200,250 170,230 C130,195 110,150 100,140 C105,115 110,95 120,80 Z" onclick="showRegionInfo('Sumatra', 'Rendang Wagyu Tokusen & Gulai Kepala Ikan')"/>
-                        <!-- Jawa -->
-                        <path class="island-path opacity-0 hover:opacity-30 fill-[#e8a838]" d="M260,280 L350,285 L420,290 L440,300 L380,310 L310,305 L250,295 Z" onclick="showRegionInfo('Jawa', 'Sate Maranggi & Sop Buntut Sampurna')"/>
-                        <!-- Kalimantan -->
-                        <path class="island-path opacity-0 hover:opacity-30 fill-[#e8a838]" d="M380,100 C430,90 470,85 480,90 C510,120 520,150 520,160 C500,200 480,220 450,220 C410,215 390,210 370,160 Z" onclick="showRegionInfo('Kalimantan', 'Soto Banjar Rempah & Patin Baunjat')"/>
-                        <!-- Sulawesi -->
-                        <path class="island-path opacity-0 hover:opacity-30 fill-[#e8a838]" d="M560,120 C580,125 610,130 610,130 C600,160 600,180 600,180 C620,185 640,190 640,190 C620,205 590,220 590,220 C570,240 560,250 560,250 C550,200 550,170 550,170 Z" onclick="showRegionInfo('Sulawesi', 'Coto Makassar & Ayam Rica-Rica Manado')"/>
-                        <!-- Bali & Nusa Tenggara -->
-                        <path class="island-path opacity-0 hover:opacity-30 fill-[#e8a838]" d="M460,300 L500,300 L540,305 L600,310 L640,305 L640,315 L460,315 Z" onclick="showRegionInfo('Bali & Nusa Tenggara', 'Bebek Betutu & Ayam Taliwang')"/>
-                        <!-- Maluku -->
-                        <path class="island-path opacity-0 hover:opacity-30 fill-[#e8a838]" d="M680,150 C710,140 730,140 730,140 C735,170 740,210 740,210 C715,215 690,220 690,220 Z" onclick="showRegionInfo('Maluku', 'Ikan Kuah Pala Banda & Sambal Dabu')"/>
-                        <!-- Papua -->
-                        <path class="island-path opacity-0 hover:opacity-30 fill-[#e8a838]" d="M780,160 C840,150 900,145 920,150 C940,190 950,240 950,240 C915,265 880,280 880,280 C840,260 800,240 800,240 Z" onclick="showRegionInfo('Papua', 'Papeda Ikan Kuah Kuning & Udang Selingkar')"/>
-                    </svg>
-                </div>
-
-                <div id="regionToast" class="mt-6 p-3 bg-[#4a1010] text-amber-200 rounded-lg text-xs md:text-sm font-medium inline-block shadow-md">
-                    <i class="fa-solid fa-location-dot text-[#e8a838] mr-2"></i>
-                    <span id="regionText">Klik pada pulau untuk menjelajahi kelezatan rempah khas daerah tersebut di Bakul Nusantara.</span>
+                    <img src="{{ asset('images/indonesia-map.png') }}" alt="Peta Indonesia Bakul Nusantara" class="w-full h-auto drop-shadow-md mx-auto object-contain max-h-[500px]">
                 </div>
             </div>
         </div>
@@ -257,7 +231,7 @@
     <!-- ================= 4. SIGNATURE MENU SECTION ================= -->
     <section id="menu" class="bg-[#270707] py-20 px-4 md:px-12 text-amber-100 border-b border-amber-900/40 relative">
         <div class="max-w-6xl mx-auto text-center relative">
-            <span class="text-xs uppercase tracking-[0.3em] text-[#e8a838] font-bold block mb-2">DELICIOUS TRADITION</span>
+            <span class="text-xs uppercase tracking-[0.3em] text-[#e8a838] font-bold block mb-2">Exquisite Culinary Art</span>
             <h2 class="font-serif-title text-4xl md:text-5xl text-amber-300 font-bold mb-4">
                 Try Our Signature Menu!
             </h2>
